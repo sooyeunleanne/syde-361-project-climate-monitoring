@@ -3,6 +3,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* dataviz palette — light */
+  --page-plane: #f9f9f7;
+  --panel-surface: rgba(252, 252, 251, 0.92);
+  --chart-surface: #fcfcfb;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #898781;
+  --chart-grid: #e1e0d9;
+  --chart-axis: #c3c2b7;
+  --chart-muted: #898781;
+
+  --status-good: #0ca30c;
+  --status-serious: #ec835a;
+  --status-critical: #d03b3b;
+
+  --series-temperature: #eb6834;
+  --series-humidity: #2a78d6;
+  --series-light: #c98500;
 }
 
 @theme inline {
@@ -16,6 +35,21 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    /* dataviz palette — dark */
+    --page-plane: #0d0d0d;
+    --panel-surface: rgba(26, 26, 25, 0.9);
+    --chart-surface: #1a1a19;
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted: #898781;
+    --chart-grid: #2c2c2a;
+    --chart-axis: #383835;
+    --chart-muted: #898781;
+
+    --series-temperature: #d95926;
+    --series-humidity: #3987e5;
+    --series-light: #c98500;
   }
 }
 
