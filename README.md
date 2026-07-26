@@ -1,38 +1,48 @@
-# syde-361-project-climate-monitoring
+# Campus Comfort Map
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A web app that visualizes microclimate sensor readings (temperature, humidity, light) across University of Waterloo campus locations, and flags spots that could use shade or other heat mitigation. Built for SYDE 361.
 
-## Getting Started
+## Try it out
 
-First, run the development server:
+**Requirements:** [Node.js](https://nodejs.org/) 20+ and npm.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## What to click on
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Pins on the map** — click a colored pin to open its detail card: live temperature/humidity/light charts, a comfort status, and a shading suggestion when a spot runs hot.
+- **Locations panel (top-left)** — lists every sensor with its current readings; click a row to jump to that pin. Switch to the **Historical Data** tab for a 7-day temperature trend per location.
+- **Time range tabs** in a location's detail card — toggle between Live Readings, 7D, 30D, and All to see how a spot trends over time.
+- Pin color = comfort status: green is comfortable, orange is warm, red is hot (see the legend under the Historical Data tab).
 
-## Learn More
+Eight of the nine locations use deterministic mock data so the demo looks the same every time. One pin, **"Live Sensor (Test Feed)"**, is wired up to a real exported dataset from a physical sensor prototype (`src/lib/data/test-location-export.json`) via `src/lib/firebase-data.ts` — in production this would read live from Firebase Realtime Database instead of a static file.
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+  app/                 Next.js app router entry (layout, page, global styles)
+  components/
+    ComfortMap.tsx      top-level layout: map + panels + popup positioning
+    CampusMap.tsx        campus image + sensor pins
+    LocationsPanel.tsx    location list / historical trend list
+    LocationDetailCard.tsx per-location popup with charts
+    LineChart.tsx         small SVG line chart used throughout
+  lib/
+    climate-data.ts      sensor locations, comfort thresholds, series generation
+    firebase-data.ts      reads raw sensor readings (stand-in for Firebase)
+    data/                 static exported readings
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Other commands
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build   # production build
+npm run start   # run the production build
+npm run lint    # eslint
+```
