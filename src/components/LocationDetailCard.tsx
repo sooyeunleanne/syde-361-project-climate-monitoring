@@ -33,7 +33,7 @@ export default function LocationDetailCard({ location, onClose }: LocationDetail
   const tip = suggestion(location, current.temperature);
 
   return (
-    <div className="w-full rounded-2xl border border-black/10 bg-(--panel-surface) p-4 shadow-xl backdrop-blur dark:border-white/10 md:w-[360px]">
+    <div className="w-full rounded-2xl border border-black/10 bg-(--panel-surface) p-4 shadow-xl backdrop-blur md:w-[360px]">
       <div className="mb-1 flex items-start justify-between gap-2">
         <div>
           <h2 className="text-base font-semibold text-(--text-primary)">{location.name}</h2>
@@ -43,7 +43,7 @@ export default function LocationDetailCard({ location, onClose }: LocationDetail
           type="button"
           onClick={onClose}
           aria-label="Close"
-          className="rounded-md p-1 text-(--text-muted) hover:bg-black/5 dark:hover:bg-white/10"
+          className="rounded-md p-1 text-(--text-muted) hover:bg-black/5"
         >
           ×
         </button>
@@ -64,7 +64,7 @@ export default function LocationDetailCard({ location, onClose }: LocationDetail
         <p className="my-3 text-sm text-(--text-secondary)">{comfortNote(location)}</p>
       )}
 
-      <div className="mb-3 flex gap-4 border-b border-black/10 text-sm dark:border-white/10">
+      <div className="mb-3 flex gap-4 border-b border-black/10 text-sm">
         {RANGES.map((r) => (
           <button
             key={r.id}

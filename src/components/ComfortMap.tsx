@@ -17,7 +17,7 @@ export default function ComfortMap() {
 
   return (
     <div className="flex w-full flex-1 flex-col gap-4 p-4 md:relative md:block md:p-0">
-      <div className="relative aspect-[1512/982] w-full overflow-hidden rounded-2xl bg-zinc-100 md:aspect-auto md:h-screen md:rounded-none dark:bg-zinc-900">
+      <div className="relative aspect-[1512/982] w-full overflow-hidden rounded-2xl bg-zinc-100 md:aspect-auto md:h-screen md:rounded-none">
         <CampusMap selectedId={selected?.id ?? null} onSelect={handleSelect} />
       </div>
 

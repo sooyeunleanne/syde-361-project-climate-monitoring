@@ -27,8 +27,8 @@ export default function LocationsPanel({ selectedId, onSelect }: LocationsPanelP
   const [tab, setTab] = useState<"locations" | "history">("locations");
 
   return (
-    <div className="w-full rounded-2xl border border-black/10 bg-(--panel-surface) shadow-xl backdrop-blur dark:border-white/10 md:w-[340px]">
-      <div className="border-b border-black/10 px-4 pt-4 pb-2 dark:border-white/10">
+    <div className="w-full rounded-2xl border border-black/10 bg-(--panel-surface) shadow-xl backdrop-blur md:w-[340px]">
+      <div className="border-b border-black/10 px-4 pt-4 pb-2">
         <h1 className="text-base font-semibold text-(--text-primary)">Campus Comfort Map</h1>
         <p className="text-xs text-(--text-muted)">{LOCATIONS.length} locations</p>
 
@@ -75,7 +75,7 @@ export default function LocationsPanel({ selectedId, onSelect }: LocationsPanelP
                 type="button"
                 onClick={() => onSelect(loc)}
                 className={`grid w-full grid-cols-[1fr_auto_auto_auto] items-center gap-x-3 px-4 py-3 text-left transition-colors ${
-                  selected ? "bg-black/5 dark:bg-white/10" : "hover:bg-black/[0.03] dark:hover:bg-white/[0.06]"
+                  selected ? "bg-black/5" : "hover:bg-black/[0.03]"
                 }`}
               >
                 <span>
@@ -106,7 +106,7 @@ export default function LocationsPanel({ selectedId, onSelect }: LocationsPanelP
                 type="button"
                 onClick={() => onSelect(loc)}
                 className={`mb-2 flex w-full items-center gap-3 rounded-lg p-2 text-left transition-colors ${
-                  selected ? "bg-black/5 dark:bg-white/10" : "hover:bg-black/[0.03] dark:hover:bg-white/[0.06]"
+                  selected ? "bg-black/5" : "hover:bg-black/[0.03]"
                 }`}
               >
                 <div className="min-w-0 flex-1">
