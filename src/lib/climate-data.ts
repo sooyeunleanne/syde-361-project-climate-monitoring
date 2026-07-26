@@ -1,3 +1,5 @@
+import { getRawReadings, type RawReading } from "./firebase-data";
+
 export type LandCover = "open-pavement" | "tree-canopy" | "lawn" | "near-water";
 
 export type ComfortStatus = "good" | "serious" | "critical";
@@ -15,6 +17,8 @@ export interface SensorLocation {
   baseTemp: number;
   baseHumidity: number;
   baseLight: number;
+  /** when set, readings for this location come from Firebase (via getRawReadings) instead of the mock generator */
+  sourceKey?: string;
 }
 
 export interface Reading {
@@ -34,6 +38,16 @@ export const LAND_COVER_LABEL: Record<LandCover, string> = {
 export const COMFORT_MAX_C = 23;
 export const SERIOUS_MAX_C = 28;
 
+const TEST_LOCATION_KEY = "test_location";
+
+// the sensor's raw ADC light reading (0–4095) converted to the same
+// volts unit the rest of the app displays for light intensity
+function lightRawToVoltage(raw: number): number {
+  return Math.round((raw / 4095) * 3.3 * 10) / 10;
+}
+
+const testLocationLatest = getRawReadings(TEST_LOCATION_KEY).at(-1);
+
 export const LOCATIONS: SensorLocation[] = [
   { id: "cph", number: 1, name: "CPH Courtyard", x: 80, y: 78, landCover: "open-pavement", baseTemp: 31, baseHumidity: 40, baseLight: 4.6 },
   { id: "ring-road", number: 2, name: "Ring Road Path", x: 65, y: 60, landCover: "open-pavement", baseTemp: 29, baseHumidity: 43, baseLight: 4.2 },
@@ -43,6 +57,18 @@ export const LOCATIONS: SensorLocation[] = [
   { id: "laurel-creek", number: 6, name: "Laurel Creek Bank", x: 53, y: 66, landCover: "near-water", baseTemp: 22, baseHumidity: 62, baseLight: 2.1 },
   { id: "arts-lawn", number: 7, name: "Arts Building Lawn", x: 62, y: 88, landCover: "tree-canopy", baseTemp: 20, baseHumidity: 53, baseLight: 1.7 },
   { id: "village-green", number: 8, name: "Village Green Canopy", x: 42, y: 47, landCover: "tree-canopy", baseTemp: 19, baseHumidity: 55, baseLight: 1.3 },
+  {
+    id: "test-sensor",
+    number: 9,
+    name: "Live Sensor (Test Feed)",
+    x: 57,
+    y: 33,
+    landCover: "open-pavement",
+    baseTemp: testLocationLatest?.temperature_c ?? 25,
+    baseHumidity: Math.round(testLocationLatest?.humidity_pct ?? 50),
+    baseLight: lightRawToVoltage(testLocationLatest?.light_raw ?? 0),
+    sourceKey: TEST_LOCATION_KEY,
+  },
 ];
 
 export function comfortStatus(tempC: number): ComfortStatus {
@@ -132,7 +158,64 @@ function labelFor(range: TimeRange, index: number, count: number): string {
   return weeksAgo === 0 ? "This wk" : `-${weeksAgo}w`;
 }
 
+const MONTH_ABBR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+function timeLabel(timestamp: string): string {
+  if (timestamp === "unsynced") return "—";
+  const [, time] = timestamp.split(" ");
+  const [h, m] = time.split(":");
+  const hour = Number(h);
+  const hour12 = ((hour + 11) % 12) + 1;
+  return `${hour12}:${m} ${hour >= 12 ? "PM" : "AM"}`;
+}
+
+function dateLabel(timestamp: string): string {
+  const [date] = timestamp.split(" ");
+  const [, month, day] = date.split("-").map(Number);
+  return `${MONTH_ABBR[month - 1]} ${day}`;
+}
+
+function generateRealSeries(sourceKey: string, range: TimeRange): Reading[] {
+  const raw = getRawReadings(sourceKey).filter((r) => r.timestamp !== "unsynced");
+  if (raw.length === 0) return [];
+
+  if (range === "live") {
+    return raw.slice(-8).map((r) => ({
+      label: timeLabel(r.timestamp),
+      temperature: r.temperature_c,
+      humidity: Math.round(r.humidity_pct),
+      light: lightRawToVoltage(r.light_raw),
+    }));
+  }
+
+  // 7d / 30d / all: bucket the readings we have by calendar day and average each day
+  const byDay = new Map<string, RawReading[]>();
+  for (const r of raw) {
+    const day = r.timestamp.split(" ")[0];
+    const bucket = byDay.get(day) ?? [];
+    bucket.push(r);
+    byDay.set(day, bucket);
+  }
+
+  const avg = (bucket: RawReading[], pick: (r: RawReading) => number) =>
+    bucket.reduce((sum, r) => sum + pick(r), 0) / bucket.length;
+
+  return Array.from(byDay.keys())
+    .sort()
+    .map((day) => {
+      const bucket = byDay.get(day)!;
+      return {
+        label: dateLabel(day),
+        temperature: Math.round(avg(bucket, (r) => r.temperature_c) * 10) / 10,
+        humidity: Math.round(avg(bucket, (r) => r.humidity_pct)),
+        light: lightRawToVoltage(Math.round(avg(bucket, (r) => r.light_raw))),
+      };
+    });
+}
+
 export function generateSeries(loc: SensorLocation, range: TimeRange): Reading[] {
+  if (loc.sourceKey) return generateRealSeries(loc.sourceKey, range);
+
   const count = pointCount(range);
   const rng = mulberry32(hashSeed(`${loc.id}:${range}`));
 
@@ -171,6 +254,13 @@ export function generateSeries(loc: SensorLocation, range: TimeRange): Reading[]
 }
 
 export function minutesAgo(loc: SensorLocation): number {
+  if (loc.sourceKey) {
+    const latest = getRawReadings(loc.sourceKey)
+      .filter((r) => r.timestamp !== "unsynced")
+      .at(-1);
+    if (!latest) return 0;
+    return Math.max(0, Math.round((Date.now() - latest.epoch * 1000) / 60000));
+  }
   const rng = mulberry32(hashSeed(`${loc.id}:updated`));
   return Math.floor(rng() * 14) + 1;
 }

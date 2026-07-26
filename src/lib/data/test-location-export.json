@@ -1,0 +1,545 @@
+{
+  "readings": {
+    "test_location": {
+      "-OyFK-to_OOyaT3tINSb": {
+        "epoch": 1784832854,
+        "humidity_pct": 22.11,
+        "light_raw": 4095,
+        "temperature_c": 35.07,
+        "timestamp": "2026-07-23 14:54:14"
+      },
+      "-OyFKF5uSlyMd8OGGyCS": {
+        "epoch": 1784832918,
+        "humidity_pct": 17.57,
+        "light_raw": 4095,
+        "temperature_c": 38.5,
+        "timestamp": "2026-07-23 14:55:18"
+      },
+      "-OyFKURdJsTcaDGBXc03": {
+        "epoch": 1784832981,
+        "humidity_pct": 15.95,
+        "light_raw": 4095,
+        "temperature_c": 41.36,
+        "timestamp": "2026-07-23 14:56:21"
+      },
+      "-OyFKilB0-dbX_qK1Cs8": {
+        "epoch": 1784833045,
+        "humidity_pct": 14.58,
+        "light_raw": 4095,
+        "temperature_c": 43.29,
+        "timestamp": "2026-07-23 14:57:25"
+      },
+      "-OyFKy4zf7qM78JQzHm1": {
+        "epoch": 1784833108,
+        "humidity_pct": 13.45,
+        "light_raw": 4095,
+        "temperature_c": 42.81,
+        "timestamp": "2026-07-23 14:58:28"
+      },
+      "-OyFMyYZddFysAqNgNpe": {
+        "epoch": 1784833631,
+        "humidity_pct": 27.3,
+        "light_raw": 4095,
+        "temperature_c": 28.09,
+        "timestamp": "2026-07-23 15:07:11"
+      },
+      "-OyFNCuieQ3pC4JQ4LI6": {
+        "epoch": 1784833695,
+        "humidity_pct": 28.27,
+        "light_raw": 4095,
+        "temperature_c": 28.35,
+        "timestamp": "2026-07-23 15:08:15"
+      },
+      "-OyFNS8fSRO2xNhAwzAp": {
+        "epoch": 1784833758,
+        "humidity_pct": 28.97,
+        "light_raw": 4095,
+        "temperature_c": 28.74,
+        "timestamp": "2026-07-23 15:09:18"
+      },
+      "-OyFNgT3m6n3wbQ9hhFR": {
+        "epoch": 1784833821,
+        "humidity_pct": 28.18,
+        "light_raw": 4095,
+        "temperature_c": 29.61,
+        "timestamp": "2026-07-23 15:10:21"
+      },
+      "-OyFNvjFzCa0zfm7MCoG": {
+        "epoch": 1784833885,
+        "humidity_pct": 26.21,
+        "light_raw": 4095,
+        "temperature_c": 30.07,
+        "timestamp": "2026-07-23 15:11:25"
+      },
+      "-OyFOmQwQ6S_EvqiUIuO": {
+        "epoch": 1784834106,
+        "humidity_pct": 25.71,
+        "light_raw": 4095,
+        "temperature_c": 29.79,
+        "timestamp": "2026-07-23 15:15:06"
+      },
+      "-OyFP0eLppxRvpbDPLBJ": {
+        "epoch": 1784834169,
+        "humidity_pct": 29.19,
+        "light_raw": 4095,
+        "temperature_c": 27.81,
+        "timestamp": "2026-07-23 15:16:09"
+      },
+      "-OyFPG2tGficZzyXORm1": {
+        "epoch": 1784834233,
+        "humidity_pct": 31.11,
+        "light_raw": 4095,
+        "temperature_c": 27.65,
+        "timestamp": "2026-07-23 15:17:13"
+      },
+      "-OyFPVJWHeO9hCW-TcR9": {
+        "epoch": 1784834296,
+        "humidity_pct": 29.98,
+        "light_raw": 4095,
+        "temperature_c": 27.54,
+        "timestamp": "2026-07-23 15:18:16"
+      },
+      "-OyFPjZmE5mkIZh9R4zx": {
+        "epoch": 1784834360,
+        "humidity_pct": 30.38,
+        "light_raw": 4095,
+        "temperature_c": 26.44,
+        "timestamp": "2026-07-23 15:19:20"
+      },
+      "-OyFSdaor66V0yqeb42V": {
+        "epoch": 1784835118,
+        "humidity_pct": 23.19,
+        "light_raw": 4095,
+        "temperature_c": 31.99,
+        "timestamp": "2026-07-23 15:31:58"
+      },
+      "-OyFSt36C7MVdWnlLriC": {
+        "epoch": 1784835182,
+        "humidity_pct": 20.37,
+        "light_raw": 4095,
+        "temperature_c": 34.21,
+        "timestamp": "2026-07-23 15:33:02"
+      },
+      "-OyFT7KwPNpJHWUjLfog": {
+        "epoch": 1784835246,
+        "humidity_pct": 18.36,
+        "light_raw": 4095,
+        "temperature_c": 36.37,
+        "timestamp": "2026-07-23 15:34:06"
+      },
+      "-OyFTMb2ml4MZaKHHbFy": {
+        "epoch": 1784835309,
+        "humidity_pct": 15.9,
+        "light_raw": 4095,
+        "temperature_c": 38.95,
+        "timestamp": "2026-07-23 15:35:09"
+      },
+      "-OyFTar6iOTV20FXYqXQ": {
+        "epoch": 1784835372,
+        "humidity_pct": 16.59,
+        "light_raw": 4095,
+        "temperature_c": 37.5,
+        "timestamp": "2026-07-23 15:36:12"
+      },
+      "-OyF_RKZEsAThlraCh8I": {
+        "epoch": 1784837161,
+        "humidity_pct": 30.09,
+        "light_raw": 4095,
+        "temperature_c": 26.8,
+        "timestamp": "2026-07-23 16:06:01"
+      },
+      "-OyF_fZ5Q1zpaHa-Y9fY": {
+        "epoch": 1784837224,
+        "humidity_pct": 31.08,
+        "light_raw": 4095,
+        "temperature_c": 26.81,
+        "timestamp": "2026-07-23 16:07:04"
+      },
+      "-OyF_uoctellrLnOKJOP": {
+        "epoch": 1784837288,
+        "humidity_pct": 29.6,
+        "light_raw": 4095,
+        "temperature_c": 26.95,
+        "timestamp": "2026-07-23 16:08:08"
+      },
+      "-OyFa93nR9hHOQRgfnML": {
+        "epoch": 1784837351,
+        "humidity_pct": 29.26,
+        "light_raw": 4095,
+        "temperature_c": 27.03,
+        "timestamp": "2026-07-23 16:09:11"
+      },
+      "-OyFaOM6i6Qarn3S8PE1": {
+        "epoch": 1784837414,
+        "humidity_pct": 29.26,
+        "light_raw": 4095,
+        "temperature_c": 27.68,
+        "timestamp": "2026-07-23 16:10:14"
+      },
+      "-OyPS3RLJWAb0vyz7PVW": {
+        "epoch": 0,
+        "humidity_pct": 50.16,
+        "light_raw": 2381,
+        "temperature_c": 24.64,
+        "timestamp": "unsynced"
+      },
+      "-OyPSJoKZQrMbbwgVxk6": {
+        "epoch": 1785002805,
+        "humidity_pct": 49.49,
+        "light_raw": 2383,
+        "temperature_c": 24.63,
+        "timestamp": "2026-07-25 14:06:45"
+      },
+      "-OyPSZL0n5QnkxmrYK1U": {
+        "epoch": 1785002869,
+        "humidity_pct": 49.22,
+        "light_raw": 3088,
+        "temperature_c": 24.52,
+        "timestamp": "2026-07-25 14:07:49"
+      },
+      "-OyPSnjl0AOStxDVjQa8": {
+        "epoch": 1785002933,
+        "humidity_pct": 49.95,
+        "light_raw": 2318,
+        "temperature_c": 24.58,
+        "timestamp": "2026-07-25 14:08:53"
+      },
+      "-OyPT1yJ34P26bZu7cNB": {
+        "epoch": 1785002995,
+        "humidity_pct": 50.65,
+        "light_raw": 1134,
+        "temperature_c": 24.57,
+        "timestamp": "2026-07-25 14:09:55"
+      },
+      "-OyPTHSB9_369WepJj0V": {
+        "epoch": 1785003059,
+        "humidity_pct": 50.28,
+        "light_raw": 1569,
+        "temperature_c": 24.35,
+        "timestamp": "2026-07-25 14:10:59"
+      },
+      "-OyPTXr2uxouakDRLXY7": {
+        "epoch": 1785003124,
+        "humidity_pct": 50.91,
+        "light_raw": 3945,
+        "temperature_c": 27.05,
+        "timestamp": "2026-07-25 14:12:04"
+      },
+      "-OyPTmFq5z_MttGST9LU": {
+        "epoch": 1785003189,
+        "humidity_pct": 41.74,
+        "light_raw": 4091,
+        "temperature_c": 31.53,
+        "timestamp": "2026-07-25 14:13:09"
+      },
+      "-OyPU1QzYk5facAjL_on": {
+        "epoch": 1785003253,
+        "humidity_pct": 40.2,
+        "light_raw": 3558,
+        "temperature_c": 31.29,
+        "timestamp": "2026-07-25 14:14:13"
+      },
+      "-OyPUGk6VlzUcSDmi1mA": {
+        "epoch": 1785003318,
+        "humidity_pct": 40.3,
+        "light_raw": 1840,
+        "temperature_c": 28.16,
+        "timestamp": "2026-07-25 14:15:18"
+      },
+      "-OyPUWAUEdZhjn0nn8vM": {
+        "epoch": 1785003381,
+        "humidity_pct": 43.3,
+        "light_raw": 2355,
+        "temperature_c": 27.04,
+        "timestamp": "2026-07-25 14:16:21"
+      },
+      "-OyPUka8Yv3NC--BJIuy": {
+        "epoch": 1785003445,
+        "humidity_pct": 44.01,
+        "light_raw": 2320,
+        "temperature_c": 26.65,
+        "timestamp": "2026-07-25 14:17:25"
+      },
+      "-OyPcCogxigdq5iY2gjV": {
+        "epoch": 1785005660,
+        "humidity_pct": 44.32,
+        "light_raw": 2027,
+        "temperature_c": 26.58,
+        "timestamp": "2026-07-25 14:54:20"
+      },
+      "-OyPcS5DvlQFnvb4Lw7k": {
+        "epoch": 1785005723,
+        "humidity_pct": 46.92,
+        "light_raw": 1991,
+        "temperature_c": 26.45,
+        "timestamp": "2026-07-25 14:55:23"
+      },
+      "-OyPcgRFXKGoGbTyW_r8": {
+        "epoch": 1785005787,
+        "humidity_pct": 46.23,
+        "light_raw": 1982,
+        "temperature_c": 25.9,
+        "timestamp": "2026-07-25 14:56:27"
+      },
+      "-OyPcvdjp-oEdPfZRpz5": {
+        "epoch": 1785005851,
+        "humidity_pct": 46.89,
+        "light_raw": 2010,
+        "temperature_c": 25.54,
+        "timestamp": "2026-07-25 14:57:31"
+      },
+      "-OyPdAXTRsmAKxeuH46v": {
+        "epoch": 1785005914,
+        "humidity_pct": 47.46,
+        "light_raw": 1990,
+        "temperature_c": 25.16,
+        "timestamp": "2026-07-25 14:58:34"
+      },
+      "-OyPdPnzm1o2zKcByedq": {
+        "epoch": 1785005980,
+        "humidity_pct": 50.72,
+        "light_raw": 1824,
+        "temperature_c": 24.95,
+        "timestamp": "2026-07-25 14:59:40"
+      },
+      "-OyPdeIMyc7gJmPkRVgm": {
+        "epoch": 1785006039,
+        "humidity_pct": 49.16,
+        "light_raw": 390,
+        "temperature_c": 25.45,
+        "timestamp": "2026-07-25 15:00:39"
+      },
+      "-OyPdtqMdP7RurUwubdR": {
+        "epoch": 1785006103,
+        "humidity_pct": 51.78,
+        "light_raw": 243,
+        "temperature_c": 26.93,
+        "timestamp": "2026-07-25 15:01:43"
+      },
+      "-OyPe8I7yZoC-BU_Tnce": {
+        "epoch": 1785006168,
+        "humidity_pct": 45.79,
+        "light_raw": 1033,
+        "temperature_c": 27.75,
+        "timestamp": "2026-07-25 15:02:48"
+      },
+      "-OyPeRLhbacj-bYlIkef": {
+        "epoch": 1785006239,
+        "humidity_pct": 44.27,
+        "light_raw": 1053,
+        "temperature_c": 27.19,
+        "timestamp": "2026-07-25 15:03:59"
+      },
+      "-OyPf-dfUyNDOlJHLYpH": {
+        "epoch": 1785006389,
+        "humidity_pct": 45.04,
+        "light_raw": 951,
+        "temperature_c": 26.59,
+        "timestamp": "2026-07-25 15:06:29"
+      },
+      "-OyPfF28Om4qwmvpD-L8": {
+        "epoch": 1785006457,
+        "humidity_pct": 45.19,
+        "light_raw": 1061,
+        "temperature_c": 26.37,
+        "timestamp": "2026-07-25 15:07:37"
+      },
+      "-OyPfUNZi_NYKeNIlTkH": {
+        "epoch": 1785006519,
+        "humidity_pct": 46.5,
+        "light_raw": 48,
+        "temperature_c": 26.18,
+        "timestamp": "2026-07-25 15:08:39"
+      },
+      "-OyPfihGkFCiYQvFKyh1": {
+        "epoch": 1785006583,
+        "humidity_pct": 46.65,
+        "light_raw": 87,
+        "temperature_c": 25.75,
+        "timestamp": "2026-07-25 15:09:43"
+      },
+      "-OyPgu4_pyxsftTMptuR": {
+        "epoch": 1785006897,
+        "humidity_pct": 46.67,
+        "light_raw": 1872,
+        "temperature_c": 28.23,
+        "timestamp": "2026-07-25 15:14:57"
+      },
+      "-OyPh8f9F8gt3wM6z0_j": {
+        "epoch": 1785006961,
+        "humidity_pct": 45.41,
+        "light_raw": 1870,
+        "temperature_c": 28.47,
+        "timestamp": "2026-07-25 15:16:01"
+      },
+      "-OyPhO1-0kgm6PLSE9IV": {
+        "epoch": 1785007025,
+        "humidity_pct": 46.93,
+        "light_raw": 1856,
+        "temperature_c": 28.09,
+        "timestamp": "2026-07-25 15:17:05"
+      },
+      "-OyPhcOi23nsU9rCyzg6": {
+        "epoch": 1785007089,
+        "humidity_pct": 47.25,
+        "light_raw": 1809,
+        "temperature_c": 27.97,
+        "timestamp": "2026-07-25 15:18:09"
+      },
+      "-OyPhrgrcYIZ73oI0WJy": {
+        "epoch": 1785007143,
+        "humidity_pct": 46.97,
+        "light_raw": 1773,
+        "temperature_c": 28.09,
+        "timestamp": "2026-07-25 15:19:03"
+      },
+      "-OyPiiHkPAikZdF962Fx": {
+        "epoch": 1785007369,
+        "humidity_pct": 42.74,
+        "light_raw": 3111,
+        "temperature_c": 29.74,
+        "timestamp": "2026-07-25 15:22:49"
+      },
+      "-OyPixb0ruRVlO9yL91w": {
+        "epoch": 1785007433,
+        "humidity_pct": 42.6,
+        "light_raw": 2992,
+        "temperature_c": 30,
+        "timestamp": "2026-07-25 15:23:53"
+      },
+      "-OyPjC22RFSIH5yoGvI2": {
+        "epoch": 1785007497,
+        "humidity_pct": 42.81,
+        "light_raw": 2867,
+        "temperature_c": 30.16,
+        "timestamp": "2026-07-25 15:24:57"
+      },
+      "-OyPjRPgGgVdonTCKFXL": {
+        "epoch": 1785007561,
+        "humidity_pct": 42.01,
+        "light_raw": 2750,
+        "temperature_c": 30.4,
+        "timestamp": "2026-07-25 15:26:01"
+      },
+      "-OyPjfbrzI6mV23_O5u9": {
+        "epoch": 1785007624,
+        "humidity_pct": 41.34,
+        "light_raw": 2697,
+        "temperature_c": 30.49,
+        "timestamp": "2026-07-25 15:27:04"
+      },
+      "-OyPlS0uVh5Fgvtuq-5K": {
+        "epoch": 1785008096,
+        "humidity_pct": 42.98,
+        "light_raw": 872,
+        "temperature_c": 29.96,
+        "timestamp": "2026-07-25 15:34:56"
+      },
+      "-OyPlgEr6KBLnhVKtfO2": {
+        "epoch": 1785008159,
+        "humidity_pct": 42.71,
+        "light_raw": 897,
+        "temperature_c": 29.85,
+        "timestamp": "2026-07-25 15:35:59"
+      },
+      "-OyPlvTvfe1luXxFrKeE": {
+        "epoch": 1785008223,
+        "humidity_pct": 42.89,
+        "light_raw": 862,
+        "temperature_c": 29.88,
+        "timestamp": "2026-07-25 15:37:03"
+      },
+      "-OyPm9yO9vxiKKMt4hO3": {
+        "epoch": 1785008287,
+        "humidity_pct": 42.48,
+        "light_raw": 848,
+        "temperature_c": 29.78,
+        "timestamp": "2026-07-25 15:38:07"
+      },
+      "-OyPmPAXh5LzVGUqN9xB": {
+        "epoch": 1785008350,
+        "humidity_pct": 42.87,
+        "light_raw": 833,
+        "temperature_c": 29.67,
+        "timestamp": "2026-07-25 15:39:10"
+      },
+      "-OyPnFkFjPDrNDKtvuJq": {
+        "epoch": 1785008577,
+        "humidity_pct": 42.56,
+        "light_raw": 3131,
+        "temperature_c": 29.6,
+        "timestamp": "2026-07-25 15:42:57"
+      },
+      "-OyPnV07Z2p8vKnJ1ivt": {
+        "epoch": 1785008640,
+        "humidity_pct": 42.41,
+        "light_raw": 3051,
+        "temperature_c": 30.14,
+        "timestamp": "2026-07-25 15:44:00"
+      },
+      "-OyPnjGSbHBp4qWrH0C6": {
+        "epoch": 1785008704,
+        "humidity_pct": 42.55,
+        "light_raw": 3009,
+        "temperature_c": 30.79,
+        "timestamp": "2026-07-25 15:45:04"
+      },
+      "-OyPnyVCpPs9KBo9sl05": {
+        "epoch": 1785008744,
+        "humidity_pct": 41.93,
+        "light_raw": 3069,
+        "temperature_c": 31.63,
+        "timestamp": "2026-07-25 15:45:44"
+      },
+      "-OyPoCmNrMNpjHdq0xaa": {
+        "epoch": 1785008807,
+        "humidity_pct": 38.86,
+        "light_raw": 3143,
+        "temperature_c": 33.18,
+        "timestamp": "2026-07-25 15:46:47"
+      },
+      "-OyPp76pThfCDXNG-q59": {
+        "epoch": 1785009048,
+        "humidity_pct": 40.64,
+        "light_raw": 3099,
+        "temperature_c": 31.87,
+        "timestamp": "2026-07-25 15:50:48"
+      },
+      "-OyPpMP9y2Dm6PX8XjIP": {
+        "epoch": 1785009113,
+        "humidity_pct": 37.99,
+        "light_raw": 3826,
+        "temperature_c": 33.73,
+        "timestamp": "2026-07-25 15:51:53"
+      },
+      "-OyPpbJvMhB-f5PQOTmW": {
+        "epoch": 1785009173,
+        "humidity_pct": 35.21,
+        "light_raw": 3888,
+        "temperature_c": 34.79,
+        "timestamp": "2026-07-25 15:52:53"
+      },
+      "-OyPpqbZl9-aLqTl4Eae": {
+        "epoch": 1785009236,
+        "humidity_pct": 33.75,
+        "light_raw": 3904,
+        "temperature_c": 36.39,
+        "timestamp": "2026-07-25 15:53:56"
+      },
+      "-OyPq4sJPG0hL0RuhLzG": {
+        "epoch": 1785009299,
+        "humidity_pct": 30.34,
+        "light_raw": 3979,
+        "temperature_c": 37.71,
+        "timestamp": "2026-07-25 15:54:59"
+      },
+      "-OyPqKEZvRHRQerZc8IG": {
+        "epoch": 1785009361,
+        "humidity_pct": 28.4,
+        "light_raw": 3660,
+        "temperature_c": 39.06,
+        "timestamp": "2026-07-25 15:56:01"
+      }
+    }
+  }
+}
