@@ -1,10 +1,11 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import CampusMap from "./CampusMap";
 import LocationsPanel from "./LocationsPanel";
 import LocationDetailCard from "./LocationDetailCard";
-import type { SensorLocation } from "@/lib/climate-data";
+import { LOCATIONS, refreshTestSensorLocation, type SensorLocation } from "@/lib/climate-data";
+import { startLiveSimulation, subscribeToLiveReadings } from "@/lib/firebase-data";
 
 const EDGE_MARGIN = 16;
 const PIN_GAP = 32;
@@ -12,12 +13,25 @@ const PIN_GAP = 32;
 export default function ComfortMap() {
   const [selected, setSelected] = useState<SensorLocation | null>(null);
   const [cardPos, setCardPos] = useState<{ top: number; left?: number; right?: number } | null>(null);
+  const [, forceUpdate] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
 
   function handleSelect(loc: SensorLocation) {
     setSelected((current) => (current?.id === loc.id ? null : loc));
   }
+
+  useEffect(() => {
+    const liveLoc = LOCATIONS.find((l) => l.sourceKey);
+    if (!liveLoc?.sourceKey) return;
+
+    const unsubscribe = subscribeToLiveReadings(() => {
+      refreshTestSensorLocation();
+      forceUpdate((n) => n + 1);
+    });
+    startLiveSimulation(liveLoc.sourceKey);
+    return unsubscribe;
+  }, []);
 
   useLayoutEffect(() => {
     if (!selected) {

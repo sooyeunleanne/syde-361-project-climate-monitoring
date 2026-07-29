@@ -71,6 +71,16 @@ export const LOCATIONS: SensorLocation[] = [
   },
 ];
 
+/** Re-reads the latest reading for the live test-feed pin and updates its baseline fields in place. */
+export function refreshTestSensorLocation(): void {
+  const latest = getRawReadings(TEST_LOCATION_KEY).at(-1);
+  const loc = LOCATIONS.find((l) => l.sourceKey === TEST_LOCATION_KEY);
+  if (!latest || !loc) return;
+  loc.baseTemp = latest.temperature_c;
+  loc.baseHumidity = Math.round(latest.humidity_pct);
+  loc.baseLight = lightRawToVoltage(latest.light_raw);
+}
+
 export function comfortStatus(tempC: number): ComfortStatus {
   if (tempC >= SERIOUS_MAX_C) return "critical";
   if (tempC >= COMFORT_MAX_C) return "serious";
