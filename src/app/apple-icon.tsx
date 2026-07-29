@@ -18,14 +18,34 @@ export default function AppleIcon() {
       >
         <div
           style={{
-            width: 100,
-            height: 100,
-            borderRadius: "50%",
-            background: "#0ca30c",
-            border: "10px solid #fcfcfb",
+            position: "relative",
+            width: 104,
+            height: 104,
             display: "flex",
           }}
-        />
+        >
+          <div
+            style={{
+              width: 104,
+              height: 104,
+              background: "linear-gradient(135deg, #3fc23f 0%, #0ca30c 55%, #086e08 100%)",
+              borderRadius: "0 100% 0 100%",
+              display: "flex",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              left: -4,
+              top: -4,
+              width: 14,
+              height: 6,
+              background: "#6b4423",
+              borderRadius: 3,
+              display: "flex",
+            }}
+          />
+        </div>
       </div>
     ),
     { ...size }

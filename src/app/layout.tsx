@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Campus Comfort Map",
+  title: "My Friend: Leafy — Campus Comfort Map",
   description:
     "Microclimate sensor readings — temperature, humidity, and light — across University of Waterloo campus locations, with comfort status and shade suggestions.",
 };

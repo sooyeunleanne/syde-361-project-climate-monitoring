@@ -20,7 +20,7 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 - **Time range tabs** in a location's detail card — toggle between Live Readings, 7D, 30D, and All to see how a spot trends over time.
 - Pin color = comfort status: green is comfortable, orange is warm, red is hot (see the legend under the Historical Data tab).
 
-Eight of the nine locations use deterministic mock data so the demo looks the same every time. One pin, **"Live Sensor (Test Feed)"**, is wired up to a real exported dataset from a physical sensor prototype (`src/lib/data/test-location-export.json`) via `src/lib/firebase-data.ts` — in production this would read live from Firebase Realtime Database instead of a static file.
+Eight of the nine locations use deterministic mock data so the demo looks the same every time. One pin, **"Leafy"**, is wired up to a real exported dataset from a physical sensor prototype (`src/lib/data/test-location-export.json`) via `src/lib/firebase-data.ts` — in production this would read live from Firebase Realtime Database instead of a static file.
 
 ## Project structure
 

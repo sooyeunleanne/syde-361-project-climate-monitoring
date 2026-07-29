@@ -60,7 +60,7 @@ export const LOCATIONS: SensorLocation[] = [
   {
     id: "test-sensor",
     number: 9,
-    name: "Live Sensor (Test Feed)",
+    name: "Leafy",
     x: 57,
     y: 33,
     landCover: "open-pavement",
