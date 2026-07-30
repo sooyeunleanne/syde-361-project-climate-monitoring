@@ -69,7 +69,7 @@ function appendSimulatedReading(locationKey: string) {
   const reading: RawReading = {
     epoch: Math.floor(now.getTime() / 1000),
     timestamp: formatTimestamp(now),
-    temperature_c: Math.round(walk(last.temperature_c, 0.7, 15, 45) * 100) / 100,
+    temperature_c: Math.round(walk(last.temperature_c, 0.4, 20, 25) * 100) / 100,
     humidity_pct: Math.round(walk(last.humidity_pct, 1.5, 10, 95) * 100) / 100,
     light_raw: Math.round(walk(last.light_raw, 80, 0, 4095)),
   };
@@ -81,7 +81,7 @@ function appendSimulatedReading(locationKey: string) {
 let simulationStarted = false;
 
 /** Idempotent: call from a client effect to start appending readings every `intervalMs`. */
-export function startLiveSimulation(locationKey: string, intervalMs = 4000): void {
+export function startLiveSimulation(locationKey: string, intervalMs = 5000): void {
   if (simulationStarted || typeof window === "undefined") return;
   simulationStarted = true;
   readingsFor(locationKey); // make sure it's seeded before the first tick

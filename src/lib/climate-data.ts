@@ -64,7 +64,7 @@ export const LOCATIONS: SensorLocation[] = [
     x: 57,
     y: 33,
     landCover: "open-pavement",
-    baseTemp: testLocationLatest?.temperature_c ?? 25,
+    baseTemp: Math.min(25, Math.max(20, testLocationLatest?.temperature_c ?? 22)),
     baseHumidity: Math.round(testLocationLatest?.humidity_pct ?? 50),
     baseLight: lightRawToVoltage(testLocationLatest?.light_raw ?? 0),
     sourceKey: TEST_LOCATION_KEY,
