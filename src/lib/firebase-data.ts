@@ -81,7 +81,7 @@ function appendSimulatedReading(locationKey: string) {
 let simulationStarted = false;
 
 /** Idempotent: call from a client effect to start appending readings every `intervalMs`. */
-export function startLiveSimulation(locationKey: string, intervalMs = 5000): void {
+export function startLiveSimulation(locationKey: string, intervalMs = 20000): void {
   if (simulationStarted || typeof window === "undefined") return;
   simulationStarted = true;
   readingsFor(locationKey); // make sure it's seeded before the first tick
