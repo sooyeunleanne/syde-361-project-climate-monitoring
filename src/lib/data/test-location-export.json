@@ -537,7 +537,7 @@
         "epoch": 1785009361,
         "humidity_pct": 28.4,
         "light_raw": 3660,
-        "temperature_c": 39.06,
+        "temperature_c": 24,
         "timestamp": "2026-07-25 15:56:01"
       }
     }
